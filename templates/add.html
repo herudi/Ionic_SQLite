@@ -1,0 +1,26 @@
+<ion-modal-view>
+    <div class="bar bar-header bar-balanced">
+        <h1 class="title">Add Friend</h1>
+        <button ng-click="closeAdd()" class="button button-clear"><i class="icon ion-ios-close-outline"></i>
+        </button>
+    </div>
+    <ion-content padding="false" class="has-header" overflow-scroll="false">
+        <form class="list" name="form" >
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Name</span>
+                <input ng-model="post.name" type="text" placeholder="Herudi" required>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Address</span>
+                <input ng-model="post.addr" type="text" placeholder="Jl. Pangeran Muhammad No.6" required>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Tlp</span>
+                <input ng-model="post.tlp" type="text" placeholder="+6287724103108" required>
+            </label>
+            <div class="padding-left padding-right">
+                <button ng-click="add()" class="button button-assertive button-outline button-block" ng-disabled="form.$invalid"><i class="icon ion-ios-plus-outline" >  ADD FRIEND</i></button>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

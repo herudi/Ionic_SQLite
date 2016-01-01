@@ -1,0 +1,27 @@
+<ion-modal-view>
+    <div class="bar bar-header bar-balanced">
+        <h1 class="title">Edit Friend</h1>
+        <button ng-click="closeEdit()" class="button button-clear"><i class="icon ion-ios-close-outline"></i>
+        </button>
+    </div>
+    <ion-content padding="false" class="has-header" overflow-scroll="false">
+        <form class="list" name="form" >
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Name</span>
+                <input type="hidden" ng-model="put.id">
+                <input ng-model="put.name" type="text" placeholder="Herudi" required>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">address</span>
+                <input ng-model="put.addr" type="text" placeholder="Jl. Pangeran Muhammad No.6" required>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Tlp</span>
+                <input ng-model="put.tlp" type="text" placeholder="+6287724103108" required>
+            </label>
+            <div class="padding-left padding-right">
+                <button ng-click="edit()" class="button button-positive button-outline button-block" ng-disabled="form.$invalid"><i class="icon ion-ios-checkmark-outline" >  EDIT FRIEND</i></button>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

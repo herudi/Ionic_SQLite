@@ -1,0 +1,24 @@
+<ion-view title="List Friend">
+    <ion-nav-buttons>
+        <button class="button button-icon icon ion-ios-plus-outline" ng-click="goAdd()">
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="secondary">
+        <button class="button button-icon icon ion-ios-search" ng-click="showFilterBar()">
+        </button>
+    </ion-nav-buttons>
+    <ion-content padding="false" class="has-header" overflow-scroll="false">
+        <ion-refresher pulling-icon="ion-arrow-down-b" on-refresh="refreshItems()">
+        </ion-refresher>   
+        <ion-list>
+            <ion-item ng-click="click(data)" ng-repeat="data in datas" type="item-text-wrap">
+                <h2>{{data.name}}</h2>
+                <p>{{data.addr}}</p>
+                <p>{{data.tlp}}</p>
+            </ion-item>
+        </ion-list>
+        <div ng-if="datas === undefined" class="no-results">
+            <p style="padding: 10px">No Friend Here</p>
+        </div>
+    </ion-content>
+</ion-view>
